@@ -1,0 +1,20 @@
+{
+  "editor.formatOnSave": true,
+
+  "python.formatting.provider": "black",
+
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+
+  "python.linting.mypyEnabled": true,
+
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.rulers": [88]
+  },
+
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+}
