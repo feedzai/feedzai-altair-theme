@@ -2,6 +2,8 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
+HERE: Path = Path(__file__).parent.resolve()
+
 
 def get_version(root: Path, rel_path: str) -> str:
     """Get the package version from a given file."""
@@ -13,14 +15,38 @@ def get_version(root: Path, rel_path: str) -> str:
         raise RuntimeError("Unable to find version string.")
 
 
-here: Path = Path(__file__).parent.resolve()
-
 setup(
     name="feedzai-altair-theme",
-    version=get_version(here, "feedzai_altair_theme/__init__.py"),
+    version=get_version(HERE, "feedzai_altair_theme/__init__.py"),
     description="Feedzai's theme for Altair charts.",
+    long_description=(HERE / "README.md").read_text(),
+    long_description_content_type="text/markdown",
     author="Feedzai",
     url="https://github.com/feedzai/feedzai-altair-theme",
     packages=find_packages(),
-    python_requires=">=3.7",
+    python_requires=">=3.7, <4",
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Information Technology",
+        "Intended Audience :: Science/Research",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Topic :: Scientific/Engineering :: Visualization",
+        "Topic :: Utilities",
+        "Typing :: Typed",
+    ],
+    keywords="altair, theme, data, visualization",
+    project_urls={
+        "Bug Reports": "https://github.com/feedzai/feedzai-altair-theme/issues",
+        "Source": "https://github.com/feedzai/feedzai-altair-theme",
+    },
 )

@@ -1,4 +1,4 @@
-.PHONY: init
+.PHONY: init format format_check lint type_check jupyter
 
 init:
 	rm -rf .venv
@@ -7,3 +7,20 @@ init:
 	export VIRTUALENV_PIP=22.0.2 && \
 	export VIRTUALENV_DOWNLOAD=1 && \
 	pipenv install --python 3.7 --dev --deploy --ignore-pipfile --sequential
+
+format:
+	pipenv run isort .
+	pipenv run black .
+
+format_check:
+	pipenv run isort --check .
+	pipenv run black --check .
+
+lint:
+	pipenv run flake8 .
+
+type_check:
+	pipenv run mypy .
+
+jupyter:
+	pipenv run jupyter lab
