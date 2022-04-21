@@ -1,8 +1,17 @@
 from pathlib import Path
+from typing import Dict, List
 
 from setuptools import find_packages, setup
 
 HERE: Path = Path(__file__).parent.resolve()
+
+ENTRY_POINTS: Dict[str, List[str]] = {
+    # Group: https://github.com/altair-viz/altair/blob/v4.2.0/altair/vegalite/v4/theme.py#L35
+    "altair.vegalite.v4.theme": [
+        "feedzai = feedzai_altair_theme.theme:feedzai",
+    ],
+}
+DEPENDENCIES: List[str] = ["altair==4.*"]
 
 
 def get_version(root: Path, rel_path: str) -> str:
@@ -24,6 +33,8 @@ setup(
     author="Feedzai",
     url="https://github.com/feedzai/feedzai-altair-theme",
     packages=find_packages(),
+    install_requires=DEPENDENCIES,
+    entry_points=ENTRY_POINTS,
     python_requires=">=3.7, <4",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
