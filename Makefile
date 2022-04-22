@@ -1,4 +1,4 @@
-.PHONY: init format format_check lint type_check jupyter all
+.PHONY: init format format_check lint type_check demo all
 
 init:
 	rm -rf .venv
@@ -22,7 +22,7 @@ lint:
 type_check:
 	pipenv run mypy .
 
-jupyter:
-	pipenv run jupyter lab
+demo:
+	pipenv run jupyter lab demo.ipynb
 
 all: type_check format lint
