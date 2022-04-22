@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-black = "==22.3.0"
+black = {version = "==22.3.0", extras = ["jupyter"]}
 flake8 = "==4.0.1"
 flake8-docstrings = "==1.6.0"
 isort = "==5.10.1"
