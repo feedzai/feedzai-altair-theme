@@ -1,6 +1,6 @@
 """Design tokens for the theme and standalone use."""
 
-from typing import Dict, Union
+from typing import Dict, List, Union
 
 FONT: str = "Roboto, Arial, sans-serif"
 
@@ -10,7 +10,7 @@ OPACITIES: Dict[str, float] = {"md": 0.5}
 
 STROKE_WIDTHS: Dict[str, float] = {"sm": 0.5, "md": 1, "lg": 2}
 
-COLORS: Dict[str, Union[str, Dict[str, int]]] = {
+COLORS: Dict[str, Union[str, Dict[str, Dict[str, List[str]]]]] = {
     "font": "#1A274E",
     "mark": "#2770EB",
     "axis": "#666F89",
