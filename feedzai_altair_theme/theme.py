@@ -3,4 +3,4 @@
 
 def feedzai():
     """Feedzai theme (light theme)."""
-    pass
+    return {"config": {}}
