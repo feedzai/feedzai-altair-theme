@@ -6,13 +6,14 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-black = {version = "==22.3.0", extras = ["jupyter"]}
 flake8 = "==4.0.1"
 flake8-docstrings = "==1.6.0"
 isort = "==5.10.1"
 jupyterlab = "==3.2.5"
 mypy = "==0.910"
 types-setuptools = "==57.4.4"
+black = { version = "==22.3.0", extras = ["jupyter"] }
+feedzai-altair-theme = { editable = true, path = "." }
 
 [requires]
 python_version = "3.7"
