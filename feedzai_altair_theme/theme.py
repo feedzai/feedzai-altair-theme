@@ -1,9 +1,10 @@
 """Altair theme configuration."""
 
 from .tokens import COLORS, FONT, FONT_SIZES, OPACITIES, STROKE_WIDTHS
+from .types import Theme
 
 
-def feedzai():
+def feedzai() -> Theme:
     """Feedzai theme (light theme)."""
     return {
         "config": {
@@ -12,16 +13,16 @@ def feedzai():
                 "domain": True,
                 "domainColor": COLORS["axis"],
                 "grid": False,
+                "gridCap": "round",
                 "gridColor": COLORS["grid"],
                 "gridDash": [3, 5],
                 "gridWidth": 0.8,
-                "gridCap": "round",
-                "labelPadding": 3,
-                "labelFont": FONT,
                 "labelColor": COLORS["axis"],
-                "tickSize": 5,
+                "labelFont": FONT,
+                "labelPadding": 3,
                 "tickColor": COLORS["axis"],
                 "tickOpacity": OPACITIES["md"],
+                "tickSize": 5,
                 "titleColor": COLORS["text"],
                 "titleFont": FONT,
                 "titleFontSize": FONT_SIZES["sm"],
