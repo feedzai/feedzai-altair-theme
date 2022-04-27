@@ -2,6 +2,8 @@
 
 from typing import Dict, List, Union
 
+from .types import Colors
+
 FONT: str = "Roboto, Arial, sans-serif"
 
 FONT_SIZES: Dict[str, int] = {"sm": 12, "md": 16, "lg": 20}
@@ -10,7 +12,7 @@ OPACITIES: Dict[str, float] = {"md": 0.5}
 
 STROKE_WIDTHS: Dict[str, float] = {"sm": 0.5, "md": 1, "lg": 2}
 
-COLORS: Dict[str, Union[str, Dict[str, Dict[str, List[str]]]]] = {
+COLORS: Colors = {
     "arc": "#FFFFFF",
     "axis": "#666F89",
     "background": "#FFFFFF",
