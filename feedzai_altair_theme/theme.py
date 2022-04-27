@@ -27,7 +27,7 @@ def feedzai() -> Theme:
                 "titleFont": FONT,
                 "titleFontSize": FONT_SIZES["sm"],
             },
-            "axisBand": {"domain": True, "ticks": False, "labelPadding": 7},
+            "axisBand": {"domain": True, "labelPadding": 7, "ticks": False},
             "axisY": {
                 "domain": False,
                 "titleAlign": "left",
@@ -37,13 +37,13 @@ def feedzai() -> Theme:
             },
             "legend": {
                 "labelColor": COLORS["axis"],
+                "labelFont": FONT,
                 "labelFontSize": FONT_SIZES["sm"],
                 "symbolSize": 40,
                 "titleColor": COLORS["text"],
+                "titleFont": FONT,
                 "titleFontSize": FONT_SIZES["sm"],
                 "titlePadding": 10,
-                "titleFont": FONT,
-                "labelFont": FONT,
             },
             # Marks
             "line": {"stroke": COLORS["mark"], "strokeWidth": STROKE_WIDTHS["lg"]},
