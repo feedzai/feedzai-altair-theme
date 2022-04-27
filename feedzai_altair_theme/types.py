@@ -1,12 +1,13 @@
 """Theme-related types."""
 
-from typing import List
+from tokenize import group
+from typing import List, Optional
 
 from typing_extensions import TypedDict
 
 
-class Axis(TypedDict):
-    """`axis` configuration."""
+class Axis(TypedDict, total=False):
+    """`axis`, `axisBand`, and `axisY` configurations."""
 
     domain: bool
     domainColor: str
@@ -20,26 +21,13 @@ class Axis(TypedDict):
     labelPadding: int
     tickColor: str
     tickOpacity: float
+    ticks: bool
     tickSize: int
+    titleAlign: str
+    titleAngle: int
     titleColor: str
     titleFont: str
     titleFontSize: int
-
-
-class AxisBand(TypedDict):
-    """`axisBand` configuration."""
-
-    domain: bool
-    labelPadding: int
-    ticks: bool
-
-
-class AxisY(TypedDict):
-    """`axisY` configuration."""
-
-    domain: bool
-    titleAlign: str
-    titleAngle: int
     titleX: int
     titleY: int
 
@@ -57,16 +45,131 @@ class Legend(TypedDict):
     titlePadding: int
 
 
+class Mark(TypedDict, total=False):
+    """`arc`, `bar`, `line`, `path`, `point`, `rect`, `rule`, `shape`, `text`, and `group` configurations."""
+
+    color: str
+    fill: str
+    filled: bool
+    font: str
+    fontSize: int
+    shape: str
+    stroke: Optional[str]
+    strokeWidth: float
+
+
+class ScaleRange(TypedDict):
+    """Scale `range` configuration."""
+
+    category: List[str]
+    diverging: List[str]
+    heatmap: List[str]
+    ramp: List[str]
+
+
+class Header(TypedDict):
+    """`header` configuration."""
+
+    labelColor: str
+    labelFont: str
+    labelFontSize: int
+    titleColor: str
+    titleFont: str
+    titleFontSize: int
+
+
+class Title(TypedDict):
+    """`title` configuration."""
+
+    anchor: str
+    color: str
+    font: str
+    fontSize: int
+    fontWeight: str
+    offset: int
+    subtitleColor: str
+    subtitleFontSize: int
+
+
+class View(TypedDict):
+    """`view` configuration."""
+
+    continuousHeight: int
+    continuousWidth: int
+    stroke: str
+
+
 class Config(TypedDict):
     """Chart theme configuration."""
 
     axis: Axis
-    axisBand: AxisBand
-    axisY: AxisY
+    axisBand: Axis
+    axisY: Axis
     legend: Legend
+    arc: Mark
+    bar: Mark
+    line: Mark
+    path: Mark
+    point: Mark
+    rect: Mark
+    rule: Mark
+    shape: Mark
+    text: Mark
+    range: ScaleRange
+    background: str
+    group: Mark
+    header: Header
+    title: Title
+    view: View
 
 
 class Theme(TypedDict):
     """Wrapper for the chart theme configuration."""
 
     config: Config
+
+
+class Categorical(TypedDict):
+    """Categorical color scheme configurations."""
+
+    default: List[str]
+    status: List[str]
+
+
+class Diverging(TypedDict):
+    """Diverging color scheme configurations."""
+
+    bluepink: List[str]
+    greenpurple: List[str]
+    tealred: List[str]
+
+
+class Sequential(TypedDict):
+    """Sequential color scheme configurations."""
+
+    blues: List[str]
+    greens: List[str]
+    greys: List[str]
+    pinks: List[str]
+    purples: List[str]
+    reds: List[str]
+
+
+class ColorScheme(TypedDict):
+    """Color scheme configuration."""
+
+    categorical: Categorical
+    diverging: Diverging
+    sequential: Sequential
+
+
+class Colors(TypedDict):
+    """Color token."""
+
+    arc: str
+    axis: str
+    background: str
+    grid: str
+    mark: str
+    text: str
+    schemes: ColorScheme
