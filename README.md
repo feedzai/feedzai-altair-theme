@@ -20,7 +20,7 @@ import altair as alt
 alt.themes.enable("feedzai")
 ```
 
-You can find some example charts in the `demo.ipynb` notebook.
+You can find some example charts in the [`demo.ipynb` notebook](demo.ipynb).
 
 ## Development
 
@@ -36,7 +36,7 @@ After implementing changes, run the command to check the types and to format and
 make all
 ```
 
-To see the changes applied to some example charts, use the `demo.ipynb` notebook:
+To see the changes applied to some example charts, use the [`demo.ipynb` notebook](demo.ipynb):
 
 ```bash
 make demo
