@@ -1,6 +1,4 @@
-![Logo](assets/logo.png)
-
-# feedzai-altair-theme
+# feedzai-altair-theme <img align="right" src="assets/logo.png" height="100"></img>
 
 Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
 
