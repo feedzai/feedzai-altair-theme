@@ -1,6 +1,6 @@
 """Altair theme configuration."""
 
-from .tokens import COLORS, FONT, FONT_SIZES, OPACITIES, STROKE_WIDTHS
+from .tokens import COLORS, FONT, FONT_SIZES, OPACITIES, SPACING, STROKE_WIDTHS
 from .types import Theme
 
 
@@ -15,19 +15,19 @@ def feedzai() -> Theme:
                 "grid": False,
                 "gridCap": "round",
                 "gridColor": COLORS["grid"],
-                "gridDash": [3, 5],
-                "gridWidth": 0.8,
+                "gridDash": [2, 4],
+                "gridWidth": STROKE_WIDTHS["sm"],
                 "labelColor": COLORS["axis"],
                 "labelFont": FONT,
-                "labelPadding": 3,
+                "labelPadding": SPACING["sm"],
                 "tickColor": COLORS["axis"],
                 "tickOpacity": OPACITIES["md"],
-                "tickSize": 5,
+                "tickSize": SPACING["md"],
                 "titleColor": COLORS["text"],
                 "titleFont": FONT,
                 "titleFontSize": FONT_SIZES["sm"],
             },
-            "axisBand": {"domain": True, "labelPadding": 7, "ticks": False},
+            "axisBand": {"domain": True, "labelPadding": SPACING["md"], "ticks": False},
             "axisY": {
                 "domain": False,
                 "titleAlign": "left",
@@ -43,7 +43,7 @@ def feedzai() -> Theme:
                 "titleColor": COLORS["text"],
                 "titleFont": FONT,
                 "titleFontSize": FONT_SIZES["sm"],
-                "titlePadding": 10,
+                "titlePadding": SPACING["md"],
             },
             # Marks
             "arc": {"stroke": COLORS["arc"], "strokeWidth": STROKE_WIDTHS["md"]},
@@ -83,7 +83,7 @@ def feedzai() -> Theme:
                 "font": FONT,
                 "fontSize": FONT_SIZES["lg"],
                 "fontWeight": "bold",
-                "offset": 20,
+                "offset": SPACING["xl"],
                 "subtitleColor": COLORS["text"],
                 "subtitleFontSize": FONT_SIZES["md"],
             },
