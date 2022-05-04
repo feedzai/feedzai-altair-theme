@@ -139,9 +139,9 @@ class Categorical(TypedDict):
 class Diverging(TypedDict):
     """Diverging color scheme configurations."""
 
-    bluepink: List[str]
-    greenpurple: List[str]
+    bluered: List[str]
     tealred: List[str]
+    greenlavender: List[str]
 
 
 class Sequential(TypedDict):
@@ -149,10 +149,11 @@ class Sequential(TypedDict):
 
     blues: List[str]
     greens: List[str]
-    greys: List[str]
-    pinks: List[str]
-    purples: List[str]
     reds: List[str]
+    yellows: List[str]
+    teals: List[str]
+    lavenders: List[str]
+    grays: List[str]
 
 
 class ColorScheme(TypedDict):
@@ -173,3 +174,9 @@ class Colors(TypedDict):
     mark: str
     text: str
     schemes: ColorScheme
+
+
+Color = TypedDict(
+    "Color",
+    {"00": str, "10": str, "20": str, "30": str, "40": str, "50": str, "60": str},
+)
