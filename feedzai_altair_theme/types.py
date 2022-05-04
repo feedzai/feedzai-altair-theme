@@ -165,7 +165,7 @@ class ColorScheme(TypedDict):
 
 
 class Colors(TypedDict):
-    """Color token."""
+    """Colors token."""
 
     arc: str
     axis: str
@@ -176,6 +176,12 @@ class Colors(TypedDict):
     schemes: ColorScheme
 
 
+"""
+Color token
+
+Colors should be ordered from lightest to darkest, where '00' is the lightest color and
+'60' is  the darkest color.
+"""
 Color = TypedDict(
     "Color",
     {"00": str, "10": str, "20": str, "30": str, "40": str, "50": str, "60": str},
