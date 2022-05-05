@@ -1,3 +1,5 @@
+![Examples of charts with the feedzai-altair-theme applied](assets/header.svg)
+
 # feedzai-altair-theme <img align="right" src="assets/logo.svg" height="96" />
 
 Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
