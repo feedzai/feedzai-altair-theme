@@ -51,7 +51,7 @@ setup(
     entry_points=ENTRY_POINTS,
     python_requires=">=3.7, <4",
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Intended Audience :: Information Technology",
         "Intended Audience :: Science/Research",
