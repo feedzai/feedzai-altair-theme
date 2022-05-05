@@ -2,6 +2,8 @@
 
 Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
 
+## Sneak peek
+
 ![Examples of charts with the feedzai-altair-theme applied](assets/header.svg)
 
 ## Quickstart
