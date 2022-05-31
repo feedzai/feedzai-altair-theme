@@ -10,10 +10,28 @@ Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
 
 ### Installation
 
-Via [`pip`](https://github.com/pypa/pip):
+Via [pip](https://github.com/pypa/pip):
 
 ```bash
-pip install git+https://github.com/feedzai/feedzai-altair-theme.git
+pip install feedzai-altair-theme
+```
+
+Via [Pipenv](https://pipenv.pypa.io/):
+
+```bash
+pipenv install feedzai-altair-theme
+```
+
+Via [Poetry](https://python-poetry.org/):
+
+```bash
+poetry add feedzai-altair-theme
+```
+
+Via [PDM](https://pdm.fming.dev/):
+
+```bash
+pdm add feedzai-altair-theme
 ```
 
 ### Usage
