@@ -12,6 +12,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-"""Feedzai's theme for Altair charts."""
+"""Feedzai's theme for Altair (https://altair-viz.github.io/) charts."""
 
 __version__: str = "1.0.0"
