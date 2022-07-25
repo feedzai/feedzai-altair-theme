@@ -1,10 +1,12 @@
-# feedzai-altair-theme <img align="right" src="./assets/logo.svg" height="96" />
+# feedzai-altair-theme <img align="right" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/logo.svg" height="96" />
+
+[![PyPI](https://img.shields.io/pypi/v/feedzai-altair-theme)](https://pypi.org/project/feedzai-altair-theme/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feedzai/feedzai-altair-theme/master?labpath=demo.ipynb)
 
 Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
 
 ## Sneak peek
 
-![Examples of charts with the feedzai-altair-theme applied](assets/header.svg)
+![Examples of charts with the feedzai-altair-theme applied](https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/header.svg)
 
 ## Quickstart
 
