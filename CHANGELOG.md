@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [1.1.1] - 2022-07-25
 
+### Added
+
+- Binder badge.
+
 ### Fixed
 
 - Use absolute URLs in README because of PyPI.
