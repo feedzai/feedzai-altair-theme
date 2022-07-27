@@ -36,6 +36,12 @@ Via [PDM](https://pdm.fming.dev/):
 pdm add feedzai-altair-theme
 ```
 
+Via [Pyflow](https://github.com/David-OConnor/pyflow):
+
+```bash
+pyflow install feedzai-altair-theme
+```
+
 ### Usage
 
 ```python
