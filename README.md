@@ -71,3 +71,15 @@ To see the changes applied to some example charts, use the [`demo.ipynb` noteboo
 ```bash
 make demo
 ```
+
+## Misc
+
+### Install the feedzai-altair-theme package in an environment without an Internet connection
+
+First, download the repo and move its root folder to your environment. From there, you can install the package with pip by pointing to the folder path and adding some extra flags:
+
+```bash
+pip install -e feedzai-altair-theme/ --no-deps --no-build-isolation
+```
+
+This command assumes that the feedzai-altair-theme package [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/setup.py#L28) are already installed in your environment. For more information about the additional flags, check the [pip install documentation](https://pip.pypa.io/en/stable/cli/pip_install/).
