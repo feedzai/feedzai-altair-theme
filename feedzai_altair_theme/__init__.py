@@ -14,4 +14,4 @@
 
 """Feedzai's theme for Altair (https://altair-viz.github.io/) charts."""
 
-__version__: str = "1.1.1"
+__version__: str = "1.1.2"
