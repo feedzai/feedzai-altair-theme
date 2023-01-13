@@ -72,6 +72,7 @@ setup(
     keywords="altair, theme, data, visualization",
     project_urls={
         "Bug Reports": "https://github.com/feedzai/feedzai-altair-theme/issues",
+        "Changelog": "https://github.com/feedzai/feedzai-altair-theme/blob/master/CHANGELOG.md",
         "Source": "https://github.com/feedzai/feedzai-altair-theme",
     },
 )
