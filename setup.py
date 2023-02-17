@@ -25,7 +25,7 @@ ENTRY_POINTS: Dict[str, List[str]] = {
         "feedzai = feedzai_altair_theme.theme:feedzai",
     ],
 }
-DEPENDENCIES: List[str] = ["altair==4.*", "typing-extensions==4.0.*"]
+DEPENDENCIES: List[str] = ["altair==4.*", "typing-extensions>=4.0, <5"]
 
 
 def get_version(root: Path, rel_path: str) -> str:
