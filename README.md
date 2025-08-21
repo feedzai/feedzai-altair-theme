@@ -112,10 +112,10 @@ This command assumes that the feedzai-altair-theme [dependencies](https://github
 
 #### Via wheel
 
-First, download the [wheel (a.k.a. built distribution)](https://pypi.org/project/feedzai-altair-theme/#files) and move it to your environment. Then install the package with pip (or an equivalent) by pointing to the file path and adding the necessary flags:
+First, download the [wheel (a.k.a. built distribution)](https://pypi.org/project/feedzai-altair-theme/#files) and move it to your environment. Then install the package with pip (or an equivalent) by pointing to the file path and adding the necessary flags after replacing `<VERSION>`:
 
 ```bash
-pip install feedzai_altair_theme-1.1.3-py3-none-any.whl
+pip install feedzai_altair_theme-<VERSION>-py3-none-any.whl
 ```
 
 This command assumes that the feedzai-altair-theme [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/pyproject.toml) are already installed in your environment.
