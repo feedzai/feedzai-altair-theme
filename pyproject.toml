@@ -5,6 +5,7 @@ description = "Feedzai's theme for Altair charts."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
+license-files = ["LICENSE"]
 authors = [{ name = "Feedzai", email = "oss-licenses@feedzai.com" }]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
