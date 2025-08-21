@@ -36,10 +36,10 @@ Via [PDM](https://pdm.fming.dev/):
 pdm add feedzai-altair-theme
 ```
 
-Via [Pyflow](https://github.com/David-OConnor/pyflow):
+Via [uv](https://docs.astral.sh/uv/):
 
 ```bash
-pyflow install feedzai-altair-theme
+uv add feedzai-altair-theme
 ```
 
 ### Usage
