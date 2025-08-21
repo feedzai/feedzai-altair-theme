@@ -1,6 +1,5 @@
 # More info:
-# - https://github.com/pypa/gh-action-pypi-publish
-# - https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+# - https://docs.astral.sh/uv/guides/integration/github/
 
 name: Publish to PyPI
 
