@@ -100,10 +100,22 @@ deactivate
 
 ### Install the feedzai-altair-theme package in an environment without an Internet connection
 
-First, download the repo and move its root folder to your environment. From there, you can install the package with pip by pointing to the folder path and adding some extra flags:
+#### Via repo
+
+First, download the repo and move it to your environment. Then install the package with pip (or an equivalent) by pointing to the folder path and adding the necessary flags:
 
 ```bash
-pip install -e feedzai-altair-theme/ --no-deps --no-build-isolation
+pip install feedzai-altair-theme/ --no-deps --no-build-isolation
 ```
 
-This command assumes that the feedzai-altair-theme package [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/setup.py#L28) are already installed in your environment. For more information about the additional flags, check the [pip install documentation](https://pip.pypa.io/en/stable/cli/pip_install/).
+This command assumes that the feedzai-altair-theme [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/pyproject.toml) and the [uv build backend](https://docs.astral.sh/uv/concepts/build-backend/) are already installed in your environment. For more information about the additional flags, check the [pip install documentation](https://pip.pypa.io/en/stable/cli/pip_install/).
+
+#### Via wheel
+
+First, download the [wheel (a.k.a. built distribution)](https://pypi.org/project/feedzai-altair-theme/#files) and move it to your environment. Then install the package with pip (or an equivalent) by pointing to the file path and adding the necessary flags:
+
+```bash
+pip install feedzai_altair_theme-1.1.3-py3-none-any.whl
+```
+
+This command assumes that the feedzai-altair-theme [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/pyproject.toml) are already installed in your environment.

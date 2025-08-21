@@ -46,8 +46,8 @@ dev = [
 ]
 
 [build-system]
-requires = ["hatchling==1.27.0"]
-build-backend = "hatchling.build"
+requires = ["uv_build==0.8.12"]
+build-backend = "uv_build"
 
 [tool.mypy]
 files = "src/feedzai_altair_theme"
