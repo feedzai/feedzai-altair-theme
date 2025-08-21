@@ -1,0 +1,43 @@
+# https://docs.astral.sh/ruff/settings/#required-version
+required-version = "0.11.2"
+# https://docs.astral.sh/ruff/settings/#target-version
+target-version = "py310"
+# https://docs.astral.sh/ruff/settings/#output-format
+output-format = "full"
+# https://docs.astral.sh/ruff/settings/#preview
+preview = false
+# https://docs.astral.sh/ruff/settings/#line-length
+line-length = 120
+
+[lint]
+# https://docs.astral.sh/ruff/linter/#rule-selection
+# https://docs.astral.sh/ruff/settings/#lint_select
+select = ["ALL"]
+# https://docs.astral.sh/ruff/settings/#lint_fixable
+fixable = ["ALL"]
+# https://docs.astral.sh/ruff/settings/#lint_ignore
+ignore = [
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules (w/ formatter)
+    "W191",
+    "E111",
+    "E114",
+    "E117",
+    "D206",
+    "D300",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "COM812",
+    "COM819",
+    "ISC001",
+    "ISC002",
+]
+
+[lint.pydocstyle]
+convention = "numpy"
+
+# https://docs.astral.sh/ruff/settings/#lint_isort_combine-as-imports
+# https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules (w/ formatter)
+[lint.isort]
+combine-as-imports = true

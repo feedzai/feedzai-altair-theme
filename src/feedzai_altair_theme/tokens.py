@@ -14,22 +14,19 @@
 
 """Design tokens for the theme and standalone use."""
 
-from typing import Dict
-
 from .types import Color, Colors
 
 FONT: str = "Roboto, Arial, sans-serif"
 
-FONT_SIZES: Dict[str, int] = {"sm": 12, "md": 16, "lg": 20}
+FONT_SIZES: dict[str, int] = {"sm": 12, "md": 16, "lg": 20}
 
-OPACITIES: Dict[str, float] = {"md": 0.5}
+OPACITIES: dict[str, float] = {"md": 0.5}
 
-STROKE_WIDTHS: Dict[str, float] = {"sm": 0.5, "md": 1, "lg": 2}
+STROKE_WIDTHS: dict[str, float] = {"sm": 0.5, "md": 1, "lg": 2}
 
-SPACING: Dict[str, int] = {"xs": 1, "sm": 2, "md": 4, "lg": 8, "xl": 20}
+SPACING: dict[str, int] = {"xs": 1, "sm": 2, "md": 4, "lg": 8, "xl": 20}
 
-
-COLOR_PRIMITIVES: Dict[str, Color] = {
+COLOR_PRIMITIVES: dict[str, Color] = {
     "blue": {
         "00": "#E9F1FD",
         "10": "#A6C4F7",

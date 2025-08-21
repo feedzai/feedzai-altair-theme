@@ -14,4 +14,6 @@
 
 """Feedzai's theme for Altair (https://altair-viz.github.io/) charts."""
 
-__version__: str = "1.1.3"
+from importlib.metadata import version
+
+__version__ = version("feedzai-altair-theme")

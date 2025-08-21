@@ -1,6 +1,49 @@
-[tool.black]
-line-length = 88
-target-version = ["py37"]
+[project]
+name = "feedzai-altair-theme"
+version = "1.1.3"
+description = "Feedzai's theme for Altair charts."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Feedzai", email = "oss-licenses@feedzai.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+keywords = ["altair", "theme", "data", "visualization"]
+dependencies = ["altair==4.*"]
 
-[tool.mypy]
-exclude = "build/"
+# Group: https://github.com/altair-viz/altair/blob/v4.2.0/altair/vegalite/v4/theme.py#L35
+[project.entry-points.'altair.vegalite.v4.theme']
+feedzai = "feedzai_altair_theme.theme:feedzai"
+
+[project.urls]
+Changelog = "https://github.com/feedzai/feedzai-altair-theme/blob/master/CHANGELOG.md"
+Issues = "https://github.com/feedzai/feedzai-altair-theme/issues"
+Source = "https://github.com/feedzai/feedzai-altair-theme"
+
+[dependency-groups]
+dev = [
+    "jupyterlab==4.1.8",
+    "mypy[faster-cache]==1.16.1",
+    "ruff==0.11.2",
+    "vega-datasets==0.9.0",
+]
+
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"

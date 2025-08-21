@@ -54,22 +54,46 @@ You can find some example charts in the [`demo.ipynb` notebook](demo.ipynb).
 
 ## Development
 
-Create the development environment:
+Assuming [uv](https://docs.astral.sh/uv/getting-started/installation/) is installed, install Python:
 
 ```bash
-make init
+uv python install
 ```
 
-After implementing changes, run the command to check the types and to format and lint the code (you can also use the individual commands defined in the `Makefile`):
+Create and activate the development environment:
 
 ```bash
-make all
+uv sync
+```
+
+```bash
+source .venv/bin/activate
+```
+
+After implementing changes, type-check with mypy, then lint and format the code with Ruff:
+
+```bash
+mypy
+```
+
+```bash
+ruff check --fix
+```
+
+```bash
+ruff format
 ```
 
 To see the changes applied to some example charts, use the [`demo.ipynb` notebook](demo.ipynb):
 
 ```bash
-make demo
+jupyter lab demo.ipynb
+```
+
+Once done, deactivate the development environment:
+
+```bash
+deactivate
 ```
 
 ## Misc
