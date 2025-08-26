@@ -8,6 +8,7 @@
 [![PyPI](https://img.shields.io/pypi/v/feedzai-altair-theme)](https://pypi.org/project/feedzai-altair-theme/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feedzai/feedzai-altair-theme/master?urlpath=/lab/tree/demo.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/feedzai/feedzai-altair-theme/blob/master/demo.ipynb)
+[![Open with marimo](https://marimo.io/shield.svg)](https://marimo.app/https://github.com/feedzai/feedzai-altair-theme/blob/master/demo.ipynb)
 
 Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
 
