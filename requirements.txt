@@ -2,6 +2,7 @@
 # - https://github.com/jupyterhub/repo2docker/issues/1427
 # - https://repo2docker.readthedocs.io/en/latest/configuration/
 
-altair==4.2.2
 vega-datasets==0.9.0
+
+# feedzai-altair-theme
 -e .
