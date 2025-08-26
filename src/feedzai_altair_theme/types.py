@@ -14,10 +14,7 @@
 
 """Theme-related types."""
 
-from tokenize import group
-from typing import List, Optional
-
-from typing_extensions import TypedDict
+from typing import TypedDict
 
 
 class Axis(TypedDict, total=False):
@@ -28,7 +25,7 @@ class Axis(TypedDict, total=False):
     grid: bool
     gridCap: str
     gridColor: str
-    gridDash: List[int]
+    gridDash: list[int]
     gridWidth: float
     labelColor: str
     labelFont: str
@@ -68,17 +65,17 @@ class Mark(TypedDict, total=False):
     font: str
     fontSize: int
     shape: str
-    stroke: Optional[str]
+    stroke: str | None
     strokeWidth: float
 
 
 class ScaleRange(TypedDict):
     """Scale `range` configuration."""
 
-    category: List[str]
-    diverging: List[str]
-    heatmap: List[str]
-    ramp: List[str]
+    category: list[str]
+    diverging: list[str]
+    heatmap: list[str]
+    ramp: list[str]
 
 
 class Header(TypedDict):
@@ -146,28 +143,28 @@ class Theme(TypedDict):
 class Categorical(TypedDict):
     """Categorical color scheme configurations."""
 
-    default: List[str]
-    status: List[str]
+    default: list[str]
+    status: list[str]
 
 
 class Diverging(TypedDict):
     """Diverging color scheme configurations."""
 
-    bluered: List[str]
-    tealred: List[str]
-    greenlavender: List[str]
+    bluered: list[str]
+    tealred: list[str]
+    greenlavender: list[str]
 
 
 class Sequential(TypedDict):
     """Sequential color scheme configurations."""
 
-    blues: List[str]
-    greens: List[str]
-    reds: List[str]
-    yellows: List[str]
-    teals: List[str]
-    lavenders: List[str]
-    grays: List[str]
+    blues: list[str]
+    greens: list[str]
+    reds: list[str]
+    yellows: list[str]
+    teals: list[str]
+    lavenders: list[str]
+    grays: list[str]
 
 
 class ColorScheme(TypedDict):

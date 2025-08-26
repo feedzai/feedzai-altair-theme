@@ -36,10 +36,10 @@ Via [PDM](https://pdm.fming.dev/):
 pdm add feedzai-altair-theme
 ```
 
-Via [Pyflow](https://github.com/David-OConnor/pyflow):
+Via [uv](https://docs.astral.sh/uv/):
 
 ```bash
-pyflow install feedzai-altair-theme
+uv add feedzai-altair-theme
 ```
 
 ### Usage
@@ -54,32 +54,68 @@ You can find some example charts in the [`demo.ipynb` notebook](demo.ipynb).
 
 ## Development
 
-Create the development environment:
+Assuming [uv](https://docs.astral.sh/uv/getting-started/installation/) is installed, install Python:
 
 ```bash
-make init
+uv python install
 ```
 
-After implementing changes, run the command to check the types and to format and lint the code (you can also use the individual commands defined in the `Makefile`):
+Create and activate the development environment:
 
 ```bash
-make all
+uv sync
+```
+
+```bash
+source .venv/bin/activate
+```
+
+After implementing changes, type-check with mypy, then lint and format the code with Ruff:
+
+```bash
+mypy
+```
+
+```bash
+ruff check --fix
+```
+
+```bash
+ruff format
 ```
 
 To see the changes applied to some example charts, use the [`demo.ipynb` notebook](demo.ipynb):
 
 ```bash
-make demo
+jupyter lab demo.ipynb
+```
+
+Once done, deactivate the development environment:
+
+```bash
+deactivate
 ```
 
 ## Misc
 
 ### Install the feedzai-altair-theme package in an environment without an Internet connection
 
-First, download the repo and move its root folder to your environment. From there, you can install the package with pip by pointing to the folder path and adding some extra flags:
+#### Via repo
+
+First, download the repo and move it to your environment. Then install the package with pip (or an equivalent) by pointing to the folder path and adding the necessary flags:
 
 ```bash
-pip install -e feedzai-altair-theme/ --no-deps --no-build-isolation
+pip install feedzai-altair-theme/ --no-deps --no-build-isolation
 ```
 
-This command assumes that the feedzai-altair-theme package [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/setup.py#L28) are already installed in your environment. For more information about the additional flags, check the [pip install documentation](https://pip.pypa.io/en/stable/cli/pip_install/).
+This command assumes that the feedzai-altair-theme [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/pyproject.toml) and the [uv build backend](https://docs.astral.sh/uv/concepts/build-backend/) are already installed in your environment. For more information about the additional flags, check the [pip install documentation](https://pip.pypa.io/en/stable/cli/pip_install/).
+
+#### Via wheel
+
+First, download the [wheel (a.k.a. built distribution)](https://pypi.org/project/feedzai-altair-theme/#files) and move it to your environment. Then install the package with pip (or an equivalent) by pointing to the file path and adding the necessary flags after replacing `<VERSION>`:
+
+```bash
+pip install feedzai_altair_theme-<VERSION>-py3-none-any.whl
+```
+
+This command assumes that the feedzai-altair-theme [dependencies](https://github.com/feedzai/feedzai-altair-theme/blob/master/pyproject.toml) are already installed in your environment.

@@ -1,33 +1,26 @@
 # More info:
-# - https://github.com/pypa/gh-action-pypi-publish
-# - https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+# - https://docs.astral.sh/uv/guides/integration/github/
+# - https://github.com/astral-sh/setup-uv
 
 name: Publish to PyPI
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      # TODO: Use versioneer and publish on tags instead.
-      - "feedzai_altair_theme/__init__.py"
+    tags:
+      - "v*"
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.10"
-      - name: Install build dependencies
-        run: pip install -U setuptools wheel build
-      - name: Build
-        run: python -m build .
+          version: "0.8.12"
+      - name: Install Python
+        run: uv python install
+      - name: Build package
+        run: uv build
       - name: Publish
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          verbose: true
+        run: uv publish --token ${{ secrets.PYPI_API_TOKEN }}
