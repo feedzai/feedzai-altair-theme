@@ -1,9 +1,7 @@
-<div align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header_dark.svg" />
-        <img alt="" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header.svg" style="height: 96px;" />
-    </picture>
-</div>
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header_dark.svg" />
+    <img alt="" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header.svg" style="max-height: 96px;" />
+</picture>
 
 # feedzai-altair-theme
 
