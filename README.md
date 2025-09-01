@@ -1,6 +1,6 @@
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header_dark.svg" />
-    <img alt="" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header.svg" style="max-height: 96px;" />
+    <img alt="" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header.svg" height="96" />
 </picture>
 
 # feedzai-altair-theme
