@@ -54,7 +54,7 @@ uv add feedzai-altair-theme
 ```python
 import altair as alt
 
-alt.themes.enable("feedzai")
+alt.theme.enable("feedzai")
 ```
 
 You can find some example charts in the [`demo.ipynb` notebook](demo.ipynb).

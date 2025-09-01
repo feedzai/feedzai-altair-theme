@@ -10,15 +10,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Google Colab badge.
 - Deployment instructions.
+- Three new examples for the demo notebook: pie chart, strip plot, and scatterplot.
+- Set the `circle` and `square` marks for scatterplots and remove the extra properties from the `point` mark.
+- Add a white border to scatterplot-related marks for accessibility.
 
 ### Changed
 
 - Switch to uv for package management and Ruff for linting and formatting.
 - Update the legacy URL parameter for the Binder demo.
+- Update the `path` property to `tick`, explicitly supporting this mark.
 
 ### Removed
 
 - Drop support for Python 3.7, 3.8, and 3.9; the minimum required version is now Python 3.10.
+- Drop support for Altair 4; the minimum required version is now [Altair 5.5.0](https://github.com/vega/altair/releases/tag/v5.5.0) with the new theme API.
+- Adopt the [`ThemeConfig` type](https://altair-viz.github.io/user_guide/generated/theme/altair.theme.ThemeConfig.html) and delete the custom types for the same purpose.
+- Clear unused theme properties.
 
 ### Fixed
 

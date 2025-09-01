@@ -14,11 +14,12 @@
 
 """Altair theme configuration."""
 
+import altair as alt
+
 from .tokens import COLORS, FONT, FONT_SIZES, OPACITIES, SPACING, STROKE_WIDTHS
-from .types import Theme
 
 
-def feedzai() -> Theme:
+def feedzai() -> alt.theme.ThemeConfig:
     """Feedzai theme (light theme)."""
     return {
         "config": {
@@ -62,17 +63,18 @@ def feedzai() -> Theme:
             # Marks
             "arc": {"stroke": COLORS["arc"], "strokeWidth": STROKE_WIDTHS["md"]},
             "bar": {"fill": COLORS["mark"], "stroke": None},
+            "circle": {"fill": COLORS["mark"], "stroke": COLORS["arc"], "strokeWidth": STROKE_WIDTHS["sm"]},
             "line": {"stroke": COLORS["mark"], "strokeWidth": STROKE_WIDTHS["lg"]},
-            "path": {"stroke": COLORS["mark"], "strokeWidth": STROKE_WIDTHS["sm"]},
-            "point": {"fill": COLORS["mark"], "shape": "circle", "filled": True},
+            "point": {"fill": COLORS["mark"], "stroke": COLORS["arc"], "strokeWidth": STROKE_WIDTHS["sm"]},
             "rect": {"fill": COLORS["mark"]},
             "rule": {"stroke": COLORS["axis"]},
-            "shape": {"stroke": COLORS["mark"]},
+            "square": {"fill": COLORS["mark"], "stroke": COLORS["arc"], "strokeWidth": STROKE_WIDTHS["sm"]},
             "text": {
                 "color": COLORS["text"],
                 "font": FONT,
                 "fontSize": FONT_SIZES["sm"],
             },
+            "tick": {"stroke": COLORS["mark"], "strokeWidth": STROKE_WIDTHS["sm"]},
             # Color scales
             "range": {
                 "category": COLORS["schemes"]["categorical"]["default"],
@@ -82,7 +84,6 @@ def feedzai() -> Theme:
             },
             # Chart
             "background": COLORS["background"],
-            "group": {"fill": COLORS["background"]},
             "header": {
                 "labelColor": COLORS["text"],
                 "labelFont": FONT,
@@ -104,7 +105,7 @@ def feedzai() -> Theme:
             "view": {
                 "continuousHeight": 300,
                 "continuousWidth": 400,
-                "stroke": "transparent",
+                "stroke": None,
             },
         }
     }
