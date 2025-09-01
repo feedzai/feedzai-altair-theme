@@ -1,6 +1,13 @@
-# feedzai-altair-theme <img align="right" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/logo.svg" height="96" />
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header_dark.svg" />
+    <img alt="" src="https://raw.githubusercontent.com/feedzai/feedzai-altair-theme/master/assets/notebook_header.svg" style="max-height: 96px;" />
+</picture>
 
-[![PyPI](https://img.shields.io/pypi/v/feedzai-altair-theme)](https://pypi.org/project/feedzai-altair-theme/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feedzai/feedzai-altair-theme/master?labpath=demo.ipynb)
+# feedzai-altair-theme
+
+[![PyPI](https://img.shields.io/pypi/v/feedzai-altair-theme)](https://pypi.org/project/feedzai-altair-theme/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feedzai/feedzai-altair-theme/master?urlpath=/lab/tree/demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/feedzai/feedzai-altair-theme/blob/master/demo.ipynb)
 
 Feedzai's theme for [Altair](https://github.com/altair-viz/altair) charts.
 
