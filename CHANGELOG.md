@@ -11,8 +11,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Google Colab badge.
 - Deployment instructions.
 - Three new examples for the demo notebook: pie chart, strip plot, and scatterplot.
+- White border to scatterplot-related marks for accessibility.
 - Set the `circle` and `square` marks for scatterplots and remove the extra properties from the `point` mark.
-- Add a white border to scatterplot-related marks for accessibility.
 
 ### Changed
 
