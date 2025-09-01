@@ -103,6 +103,50 @@ Once done, deactivate the development environment:
 deactivate
 ```
 
+## Deployment
+
+### Bump the package version
+
+Bump the feedzai-altair-theme version using one of the following commands, according to the [Semantic Versioning](https://semver.org/) specification:
+
+```bash
+uv version --bump patch
+```
+
+```bash
+uv version --bump minor
+```
+
+```bash
+uv version --bump major
+```
+
+Next, confirm you can build the package locally:
+
+```bash
+uv build
+```
+
+### Open a PR
+
+Once the changes are finished and the feedzai-altair-theme version is updated, open a [PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). After the PR is merged, a maintainer will ensure a new package version is released.
+
+### Release the new package version
+
+To release a new version of feedzai-altair-theme, create a new (lightweight) tag from the `master` branch, and a GitHub Actions workflow will take care of the rest:
+
+```bash
+git tag "$(uv version --short)"
+```
+
+```bash
+git tag -n
+```
+
+```bash
+git push origin --tags
+```
+
 ## Misc
 
 ### Install the feedzai-altair-theme package in an environment without an Internet connection
