@@ -1,6 +1,6 @@
 [project]
 name = "feedzai-altair-theme"
-version = "1.1.3"
+version = "2.0.0"
 description = "Feedzai's theme for Altair charts."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,10 +27,10 @@ classifiers = [
     "Typing :: Typed",
 ]
 keywords = ["altair", "theme", "data", "visualization"]
-dependencies = ["altair==4.*"]
+dependencies = ["altair>=5.5.0"]
 
-# Group: https://github.com/altair-viz/altair/blob/v4.2.0/altair/vegalite/v4/theme.py#L35
-[project.entry-points.'altair.vegalite.v4.theme']
+# Group: https://github.com/vega/altair/blob/v5.5.0/altair/vegalite/v5/theme.py#L102
+[project.entry-points.'altair.vegalite.v5.theme']
 feedzai = "feedzai_altair_theme.theme:feedzai"
 
 [project.urls]
