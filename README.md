@@ -136,7 +136,7 @@ Once the changes are finished and the feedzai-altair-theme version is updated, o
 To release a new version of feedzai-altair-theme, create a new (lightweight) tag from the `master` branch, and a GitHub Actions workflow will take care of the rest:
 
 ```bash
-git tag "$(uv version --short)"
+git tag "v$(uv version --short)"
 ```
 
 ```bash
