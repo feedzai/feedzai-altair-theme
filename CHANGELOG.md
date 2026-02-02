@@ -8,6 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Support for Altair 6.
+- Test suite for theme registration and enablement.
+
+### Changed
+
+- Use the new `altair.datasets` module instead of `vega-datasets` for Altair 6 in the demo notebook.
+
+## [2.0.0] - 2025-09-03
+
+### Added
+
 - Google Colab badge.
 - Deployment instructions.
 - Three new examples for the demo notebook: pie chart, strip plot, and scatterplot.

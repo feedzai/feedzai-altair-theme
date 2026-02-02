@@ -97,7 +97,17 @@ To see the changes applied to some example charts, use the [`demo.ipynb` noteboo
 jupyter lab demo.ipynb
 ```
 
-Once done, deactivate the development environment:
+Once done, run the tests to confirm that the theme is working for the major supported versions of Altair:
+
+```bash
+uv run --isolated --with "altair==5.5.0" pytest
+```
+
+```bash
+uv run --isolated --with "altair==6.0.0" pytest
+```
+
+Finally, deactivate the development environment:
 
 ```bash
 deactivate

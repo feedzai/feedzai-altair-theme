@@ -29,8 +29,12 @@ classifiers = [
 keywords = ["altair", "theme", "data", "visualization"]
 dependencies = ["altair>=5.5.0"]
 
-# Group: https://github.com/vega/altair/blob/v5.5.0/altair/vegalite/v5/theme.py#L102
+# Group (Altair 5): https://github.com/vega/altair/blob/v5.5.0/altair/vegalite/v5/theme.py#L102
 [project.entry-points.'altair.vegalite.v5.theme']
+feedzai = "feedzai_altair_theme.theme:feedzai"
+
+# Group (Altair 6): https://github.com/vega/altair/blob/v6.0.0/altair/vegalite/v6/theme.py#L102
+[project.entry-points.'altair.vegalite.v6.theme']
 feedzai = "feedzai_altair_theme.theme:feedzai"
 
 [project.urls]
@@ -42,6 +46,7 @@ Source = "https://github.com/feedzai/feedzai-altair-theme"
 dev = [
     "jupyterlab==4.1.8",
     "mypy[faster-cache]==1.16.1",
+    "pytest==9.0.2",
     "ruff==0.11.2",
     "vega-datasets==0.9.0",
 ]
@@ -116,3 +121,10 @@ convention = "numpy"
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["INP001", "S101"]
+
+[tool.pytest]
+addopts = ["--import-mode=importlib"]
+testpaths = ["tests"]
