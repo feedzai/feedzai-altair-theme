@@ -20,3 +20,11 @@ import altair as alt
 def test_theme_is_available() -> None:
     """Check if the theme was registered via an entry point and is available as an Altair theme."""
     assert "feedzai" in alt.theme.names()
+
+
+def test_theme_is_enabled() -> None:
+    """Check if the theme is not active by default and can be enabled."""
+    assert alt.theme.active != "feedzai"
+
+    alt.theme.enable("feedzai")
+    assert alt.theme.active == "feedzai"

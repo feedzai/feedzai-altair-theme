@@ -34,8 +34,8 @@ dependencies = ["altair>=5.5.0"]
 feedzai = "feedzai_altair_theme.theme:feedzai"
 
 # Group (Altair 6): https://github.com/vega/altair/blob/v6.0.0/altair/vegalite/v6/theme.py#L102
-# [project.entry-points.'altair.vegalite.v6.theme']
-# feedzai = "feedzai_altair_theme.theme:feedzai"
+[project.entry-points.'altair.vegalite.v6.theme']
+feedzai = "feedzai_altair_theme.theme:feedzai"
 
 [project.urls]
 Changelog = "https://github.com/feedzai/feedzai-altair-theme/blob/master/CHANGELOG.md"
