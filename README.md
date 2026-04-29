@@ -113,6 +113,22 @@ Finally, deactivate the development environment:
 deactivate
 ```
 
+### GitHub Actions
+
+The feedzai-altair-theme is published via [GitHub Actions](https://docs.github.com/en/actions). So, [zizmor](https://github.com/zizmorcore/zizmor) is used to lint workflows and [pinact](https://github.com/suzuki-shunsuke/pinact) to pin versions of actions like `actions/checkout`.
+
+If you change the [`release.yml` file](.github/workflows/release.yml), install [zizmor](https://docs.zizmor.sh/installation/) (if necessary), run the following command, and implement the relevant feedback:
+
+```bash
+zizmor .
+```
+
+To update action versions, install [pinact](https://github.com/suzuki-shunsuke/pinact/blob/main/INSTALL.md) (if necessary) and run the following command:
+
+```bash
+pinact run -u --min-age 7
+```
+
 ## Deployment
 
 ### Bump the package version

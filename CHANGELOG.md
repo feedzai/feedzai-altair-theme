@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Lint the GitHub Actions workflow with [zizmor](https://github.com/zizmorcore/zizmor) and [pin all actions](https://github.com/suzuki-shunsuke/pinact).
+
 ## [2.1.0] - 2026-02-02
 
 ### Added
