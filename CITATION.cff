@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: feedzai-altair-theme
+message: If you use feedzai-altair-theme, please cite it using the metadata from this file.
+type: software
+authors:
+  - name: Feedzai
+    email: oss-licenses@feedzai.com
+repository-code: https://github.com/feedzai/feedzai-altair-theme
+url: https://github.com/feedzai/feedzai-altair-theme
+repository-artifact: https://pypi.org/project/feedzai-altair-theme/
+abstract: Feedzai's theme for Altair charts.
+keywords:
+  - python
+  - data visualization
+  - altair
+  - altair themes
+license-url: https://github.com/feedzai/feedzai-altair-theme/blob/master/LICENSE
+date-released: 2022-06-02
