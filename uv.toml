@@ -1,3 +1,8 @@
+add-bounds = "major"
+exclude-newer = "7 days"
 python-downloads = "manual"
 python-preference = "only-managed"
-required-version = ">=0.8.12"
+required-version = ">=0.11.6"
+
+[pip]
+only-binary = [":all:"]

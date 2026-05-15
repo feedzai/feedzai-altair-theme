@@ -6,9 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- `CITATION.cff` file to show how to cite the package.
+
 ### Changed
 
 - Lint the GitHub Actions workflow with [zizmor](https://github.com/zizmorcore/zizmor) and [pin all actions](https://github.com/suzuki-shunsuke/pinact).
+- Update the [uv configuration](https://docs.astral.sh/uv/reference/settings/) to follow security best practices.
+- Bump mypy and Ruff and update their configurations.
 
 ## [2.1.0] - 2026-02-02
 
