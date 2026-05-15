@@ -45,9 +45,9 @@ Source = "https://github.com/feedzai/feedzai-altair-theme"
 [dependency-groups]
 dev = [
     "jupyterlab==4.1.8",
-    "mypy[faster-cache]==1.16.1",
+    "mypy==1.20.1",
     "pytest==9.0.2",
-    "ruff==0.11.2",
+    "ruff==0.15.11",
     "vega-datasets==0.9.0",
 ]
 
@@ -59,9 +59,13 @@ build-backend = "uv_build"
 files = "src/feedzai_altair_theme"
 python_version = "3.10"
 
+allow_redefinition_new = true
 check_untyped_defs = true
 disallow_any_generics = true
+disallow_any_unimported = true
+disallow_incomplete_defs = true
 disallow_subclassing_any = true
+disallow_untyped_calls = true
 disallow_untyped_decorators = true
 disallow_untyped_defs = true
 error_summary = true
@@ -69,11 +73,13 @@ exclude_gitignore = true
 extra_checks = true
 follow_imports = "normal"
 local_partial_types = true
+no_implicit_reexport = true
 pretty = true
 show_column_numbers = true
 show_error_context = true
 strict_bytes = true
 strict_equality = true
+strict_equality_for_none = true
 warn_incomplete_stub = true
 warn_no_return = true
 warn_redundant_casts = true
@@ -81,15 +87,31 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_ignores = true
 
+enable_error_code = [
+    "deprecated",
+    "exhaustive-match",
+    "explicit-override",
+    "ignore-without-code",
+    "mutable-override",
+    "possibly-undefined",
+    "redundant-expr",
+    "redundant-self",
+    "truthy-bool",
+    "truthy-iterable",
+    "unimported-reveal",
+    "unused-awaitable",
+]
+
 incremental = true
+sqlite_cache = true
 # "The warn_unused_configs flag may be useful to debug misspelled section names.":
-# - https://github.com/python/mypy/blob/v1.16.1/docs/source/config_file.rst#config-file-format
-# - https://github.com/python/mypy/blob/v1.16.1/docs/source/config_file.rst#miscellaneous
+# - https://github.com/python/mypy/blob/v1.20.1/docs/source/config_file.rst#config-file-format
+# - https://github.com/python/mypy/blob/v1.20.1/docs/source/config_file.rst#miscellaneous
 # incremental = false
 # warn_unused_configs = true
 
 [tool.ruff]
-required-version = "0.11.2"
+required-version = "0.15.11"
 target-version = "py310"
 output-format = "full"
 preview = false
@@ -99,7 +121,8 @@ line-length = 120
 select = ["ALL"]
 fixable = ["ALL"]
 ignore = [
-    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules (w/ formatter)
+    # https://github.com/astral-sh/ruff/blob/0.15.11/docs/formatter.md#conflicting-lint-rules (w/ formatter)
+    # https://docs.astral.sh/ruff/settings/#lint_flake8-implicit-str-concat_allow-multiline
     "W191",
     "E111",
     "E114",
@@ -110,10 +133,9 @@ ignore = [
     "Q001",
     "Q002",
     "Q003",
+    "Q004",
     "COM812",
     "COM819",
-    "ISC001",
-    "ISC002",
 ]
 
 [tool.ruff.lint.pydocstyle]
@@ -123,6 +145,7 @@ convention = "numpy"
 combine-as-imports = true
 
 [tool.ruff.lint.per-file-ignores]
+"demo.ipynb" = ["PLC0415"]
 "tests/*" = ["INP001", "S101"]
 
 [tool.pytest]
