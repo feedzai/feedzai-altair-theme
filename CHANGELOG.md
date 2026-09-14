@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.1.1] - 2026-09-14
+
 ### Added
 
 - `CITATION.cff` file to show how to cite the package.
@@ -15,6 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Lint the GitHub Actions workflow with [zizmor](https://github.com/zizmorcore/zizmor) and [pin all actions](https://github.com/suzuki-shunsuke/pinact).
 - Update the [uv configuration](https://docs.astral.sh/uv/reference/settings/) to follow security best practices.
 - Bump mypy and Ruff and update their configurations.
+- Adopt [Trusted Publishing](https://docs.pypi.org/trusted-publishers/).
+- Bump actions.
 
 ## [2.1.0] - 2026-02-02
 
